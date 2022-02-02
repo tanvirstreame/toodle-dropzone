@@ -1,8 +1,24 @@
 {
-  "name": "toodler",
-  "version": "0.1.0",
-  "private": true,
+  "name": "toodle-dropzone",
+  "version": "1.0.5",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanvirstreame/toodle-dropzone"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "dropzone",
+    "file",
+    "drag",
+    "drop"
+  ],
+  "author": "Tanvir Islam Streame",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -13,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && babel src --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11"
   }
 }
